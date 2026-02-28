@@ -4,7 +4,7 @@
   <img src="newubellogo.PNG" alt="Ubelisk Logo" width="120"/>
 </p>
 
-<h1 align="center">Ubelisk</h1>
+<h1 align="center">UBELISK</h1>
 <p align="center">Nintendo Switch 2 Emulator — Early Development</p>
 
 ---
