@@ -1,0 +1,180 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="UbeliskUI.MainWindow"
+        Title="Ubelisk - Nintendo Switch 2 EMU"
+        Width="1280" Height="720"
+        Background="#0A0A0F">
+
+  <Grid>
+
+    <!-- INTRO SCREEN -->
+    <Grid x:Name="IntroScreen">
+      <Border Background="#E60012"
+              Width="500" Height="300"
+              CornerRadius="20"
+              HorizontalAlignment="Left"
+              Margin="60,0,0,0">
+        <TextBlock Text="CPU" Foreground="White"
+                   FontSize="24" FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+      </Border>
+
+      <Border Background="#0064DC"
+              Width="500" Height="300"
+              CornerRadius="20"
+              HorizontalAlignment="Right"
+              Margin="0,0,60,0">
+        <TextBlock Text="Display" Foreground="White"
+                   FontSize="24" FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+      </Border>
+
+      <TextBlock Text="UBELISK"
+                 Foreground="White"
+                 FontSize="64" FontWeight="Bold"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"/>
+    </Grid>
+
+    <!-- MAIN SCREEN -->
+    <Grid x:Name="MainScreen" IsVisible="False">
+
+      <!-- Game list area -->
+      <Border Margin="0,50,0,40" Background="#111118" CornerRadius="16">
+        <TextBlock Text="No games loaded&#x0a;Use File → Load ROM to get started"
+                   Foreground="#444444" FontSize="20"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"/>
+      </Border>
+
+      <!-- Bottom status bar -->
+      <Border Height="40" VerticalAlignment="Bottom" Background="#111118">
+        <TextBlock x:Name="StatusText" Text="Ready"
+                   Foreground="#555555" FontSize="12"
+                   Margin="15,0" VerticalAlignment="Center"/>
+      </Border>
+
+      <!-- Menu Bar -->
+      <Border x:Name="MenuBar"
+              Background="#111118"
+              Height="50"
+              VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+
+          <!-- U Logo with red to blue gradient -->
+          <Border Width="32" Height="32" CornerRadius="6" Margin="8,0,8,0">
+            <Border.Background>
+              <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+                <GradientStop Color="#E60012" Offset="0"/>
+                <GradientStop Color="#0064DC" Offset="1"/>
+              </LinearGradientBrush>
+            </Border.Background>
+            <TextBlock Text="U"
+                       Foreground="White"
+                       FontSize="18" FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+          </Border>
+
+          <Button x:Name="FileBtn" Content="File" Margin="4,0"
+                  Background="Transparent" Foreground="White"
+                  FontSize="14" Click="FileBtn_Click"/>
+
+          <Button x:Name="OptionsBtn" Content="Options" Margin="4,0"
+                  Background="Transparent" Foreground="White"
+                  FontSize="14" Click="OptionsBtn_Click"/>
+
+          <Button Content="Network" Margin="4,0"
+                  Background="Transparent" Foreground="White"
+                  FontSize="14"/>
+
+          <Button Content="Help" Margin="4,0"
+                  Background="Transparent" Foreground="White"
+                  FontSize="14"/>
+
+          <TextBlock Text="Ubelisk - Nintendo Switch 2 EMU"
+                     Foreground="#555555" FontSize="13"
+                     VerticalAlignment="Center"
+                     Margin="380,0,0,0"/>
+        </StackPanel>
+      </Border>
+
+      <!-- File Dropdown -->
+      <Border x:Name="FileDropdown"
+              IsVisible="False"
+              Background="#1A1A24"
+              CornerRadius="10"
+              Width="200"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              Margin="58,50,0,0"
+              BoxShadow="0 4 20 0 #000000">
+        <StackPanel Margin="5">
+          <Button Content="📁  Open Folder"
+                  Background="Transparent" Foreground="White"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left"
+                  Margin="5,2" Padding="8,8"
+                  Click="OpenFolder_Click"/>
+          <Button Content="📄  Open File"
+                  Background="Transparent" Foreground="White"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left"
+                  Margin="5,2" Padding="8,8"
+                  Click="OpenFile_Click"/>
+        </StackPanel>
+      </Border>
+
+      <!-- Options Dropdown -->
+      <Border x:Name="OptionsDropdown"
+              IsVisible="False"
+              Background="#1A1A24"
+              CornerRadius="10"
+              Width="220"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              Margin="118,50,0,0"
+              BoxShadow="0 4 20 0 #000000">
+        <StackPanel Margin="5">
+
+          <CheckBox x:Name="FullscreenCheck"
+                    Content="Launch in Fullscreen"
+                    Foreground="White" Margin="10,8"
+                    Checked="FullscreenCheck_Checked"
+                    Unchecked="FullscreenCheck_Unchecked"/>
+
+          <Button Content="Change User Profile"
+                  Background="Transparent" Foreground="White"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left"
+                  Margin="5,2" Padding="8,6"
+                  Click="ChangeProfile_Click"/>
+
+          <Button Content="Restart Ubelisk"
+                  Background="Transparent" Foreground="#FF6B6B"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Left"
+                  Margin="5,2" Padding="8,6"
+                  Click="RestartBtn_Click"/>
+
+          <Separator Background="#333333" Margin="10,5"/>
+
+          <Button Content="⚙ Open Settings"
+                  Background="#0064DC" Foreground="White"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Center"
+                  CornerRadius="8"
+                  Margin="8,5" Padding="8,8"
+                  Click="OpenSettings_Click"/>
+
+        </StackPanel>
+      </Border>
+
+    </Grid>
+
+  </Grid>
+
+</Window>
