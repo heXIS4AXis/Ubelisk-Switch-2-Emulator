@@ -1,7 +1,7 @@
 # Ubelisk-Switch-2-Emulator
 
 <p align="center">
-  <img src="logo.jpg" alt="Ubelisk Logo" width="120"/>
+  <img src="newubellogo.PNG" alt="Ubelisk Logo" width="120"/>
 </p>
 
 <h1 align="center">Ubelisk</h1>
