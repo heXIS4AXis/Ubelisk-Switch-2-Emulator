@@ -15,7 +15,7 @@
 
 ## What is Ubelisk?
 
-Ubelisk is a Nintendo Switch 2 emulator currently in early development. The goal of the project is to eventually achieve full emulation of the Nintendo Switch 2 hardware, starting from a proof-of-concept foundation and building up over time.
+Ubelisk is a Nintendo Switch 1 & 2 emulator currently in early development. The goal of the project is to eventually achieve full emulation of the Nintendo Switch 1 & 2 hardware within a single emulator, starting from this early foundation and building up over time.
 
 This project is being built from the ground up in C# with a focus on accuracy, performance, and a clean user experience.
 
