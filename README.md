@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">UBELISK</h1>
-<p align="center">Nintendo Switch 2 Emulator — Early Development</p>
+<p align="center">Nintendo Switch 1 & 2 Emulator — Early Development</p>
 
 ---
 
@@ -17,7 +17,7 @@
 
 Ubelisk is a Nintendo Switch 1 & 2 emulator currently in early development. The goal of the project is to eventually achieve full emulation of the Nintendo Switch 1 & 2 hardware within a single emulator, starting from this early foundation and building up over time.
 
-This project is being built from the ground up in C# with a focus on accuracy, performance, and a clean user experience.
+This project is being built up back from the ground in Rust with a focus on accuracy, performance, and a clean user experience.
 
 ## Current State
 
